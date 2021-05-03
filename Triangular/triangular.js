@@ -8,8 +8,6 @@
  * @returns {number} calculated triangular number
  */
 function triangular(inputNumber) {
-  let triangularNumber;
-
   // Check for missing argument
   if (inputNumber === undefined) {
     throw new Error(`No argument passed. Please enter a number.`);
@@ -21,6 +19,10 @@ function triangular(inputNumber) {
   if (isNaN(convertedInputNumber)) {
     throw new Error(`Invalid argument passed. Please enter a number.`);
   }
+
+  // Calculate input's triangular number
+  const triangularNumber =
+    (Number(inputNumber) * (Number(inputNumber) + 1)) / 2;
 
   return triangularNumber;
 }
