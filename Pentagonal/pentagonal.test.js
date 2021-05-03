@@ -1,5 +1,3 @@
-const { test, expect } = require('@jest/globals');
-const { describe } = require('yargs');
 const pentagonal = require('./pentagonal.js');
 
 describe('the pentagonal function', () => {

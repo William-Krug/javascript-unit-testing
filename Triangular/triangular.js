@@ -1,5 +1,5 @@
 /**
- * Calculates, and returns the given number's triangular number using
+ * Calculates, and returns, the given number's triangular number using
  * the following equation:
  *
  *    T(n) = (n(n+1))/2
