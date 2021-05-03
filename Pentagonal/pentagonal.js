@@ -13,6 +13,17 @@ function pentagonal(inputNumber) {
     throw new Error(`No argument passed. Please enter a number.`);
   }
 
+  // Check for non number character inputs (eg. 'hi')
+  const convertedInputNumber = Number(inputNumber);
+
+  if (isNaN(convertedInputNumber)) {
+    throw new Error(`Invalid argument passed. Please enter a number.`);
+  }
+
+  // Calculate input's pentagonal number
+  const pentagonalNumber =
+    (Number(inputNumber) * (3 * Number(inputNumber) - 1)) / 2;
+
   return pentagonalNumber;
 }
 
