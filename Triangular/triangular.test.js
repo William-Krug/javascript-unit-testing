@@ -38,6 +38,8 @@ describe('the triangular function', () => {
     Missing Input Path
   */
   test('should fail if given no arguments', () => {
-    triangular();
-  }).toThrow(`No argument passed. Please enter a number.`);
+    expect(() => {
+      triangular();
+    }).toThrow(`No argument passed. Please enter a number.`);
+  });
 });
