@@ -1,4 +1,3 @@
-const { test, expect } = require('@jest/globals');
 const triangular = require('./triangular.js');
 
 describe('the triangular function', () => {
