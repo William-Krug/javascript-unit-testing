@@ -2,6 +2,18 @@ const triangular = require('../Triangular/triangular.js');
 const pentagonal = require('../Pentagonal/pentagonal.js');
 const hexagonal = require('../Hexagonal/hexagonal.js');
 
+/**
+ * Calculates and returns the next
+ *
+ *    Triangular Number === Pentagonal Number === Hexagonal Number
+ *
+ * from the starting numbers for each individual equation.
+ *
+ * @param {number} triangle starting point for Triangular Number calculations
+ * @param {number} pentagon starting point for Pentagonal Number calculations
+ * @param {number} hexagon starting point for Hexagonal Number calculations
+ * @returns {object} starting values for triangular, pentagonal, and hexagonal equations and their equivalent Number
+ */
 function findNextTPHNumber(triangle, pentagon, hexagon) {
   // Storage array for all results
   const results = {
@@ -24,41 +36,23 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
 
   while (!numberFound) {
     // Calculate Hexagonal Number from its starting number
-    hexagonalNumber = hexagonal(hexagonalStartingNumber);
-
-    console.log('*** in hexagonal loop ***');
-    console.log('\thexagonalStartingNumber:', hexagonalStartingNumber);
-    console.log('\thexagonalNumber:', hexagonalNumber);
+    hexagonalNumber = BigInt(hexagonal(hexagonalStartingNumber));
 
     // Calculate Pentagonal Number from its starting number
-    pentagonalNumber = pentagonal(pentagonalStartingNumber);
+    pentagonalNumber = BigInt(pentagonal(pentagonalStartingNumber));
 
     // While the Pentagonal Number is less than or equal to the Hexagonal
     // Number, add 1 to the starting number and recalculate
-    while (pentagonalNumber < hexagonalNumber || pentagonalNumber === 0) {
-      console.log('*** in pentagonal loop ***');
-      console.log('\thexagonalStartingNumber:', hexagonalStartingNumber);
-      console.log('\thexagonalNumber:', hexagonalNumber);
-      console.log('\tpentagonalStartingNumber:', pentagonalStartingNumber);
-      console.log('\tpentagonalNumber:', pentagonalNumber);
-
+    while (pentagonalNumber <= hexagonalNumber || pentagonalNumber === 0) {
       // If the Pentagonal Number is the same as the Hexagonal Number,
       // start check on the Triangular Number
       if (pentagonalNumber === hexagonalNumber) {
         // Calculate Triangular Number from its starting number
-        triangularNumber = triangular(triangularStartingNumber);
+        triangularNumber = BigInt(triangular(triangularStartingNumber));
 
         // While the Triangular Number is less than or equal to the Pentagonal
         // Number, add 1 to the starting number and recalculate
         while (triangularNumber <= pentagonalNumber || triangularNumber === 0) {
-          console.log('*** in triangular loop ***');
-          console.log('\thexagonalStartingNumber:', hexagonalStartingNumber);
-          console.log('\thexagonalNumber:', hexagonalNumber);
-          console.log('\tpentagonalStartingNumber:', pentagonalStartingNumber);
-          console.log('\tpentagonalNumber:', pentagonalNumber);
-          console.log('\ttriangularStartingNumber:', triangularStartingNumber);
-          console.log('\ttriangularNumber:', triangularNumber);
-
           // If the Triangular Number is the same as the Pentagonal Number
           // (and by the associative property of mathematics, the Hexagonal
           // Number), store the shape's starting numbers and Triangular Number
@@ -69,6 +63,8 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
             results.h = hexagonalStartingNumber;
             results.number = triangularNumber;
 
+            console.log('*#* RESULTS *#*');
+            console.log('\tresults:', results);
             return results;
           }
           // Triangular Number is less than Pentagonal Number
@@ -77,7 +73,7 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
             triangularStartingNumber += 1;
 
             // Calculate new Triangular Number with updated starting number
-            triangularNumber = triangular(triangularStartingNumber);
+            triangularNumber = BigInt(triangular(triangularStartingNumber));
           }
         }
       }
@@ -87,7 +83,7 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
         pentagonalStartingNumber += 1;
 
         // Calculate the new Pentagonal Number with updated starting number
-        pentagonalNumber = pentagonal(pentagonalStartingNumber);
+        pentagonalNumber = BigInt(pentagonal(pentagonalStartingNumber));
       }
     }
 
@@ -96,6 +92,8 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
   }
 }
 
-findNextTPHNumber(0, 0, 0);
+findNextTPHNumber(1, 1, 1);
+findNextTPHNumber(2, 2, 2);
+findNextTPHNumber(286, 166, 144);
 
 module.exports = findNextTPHNumber;

@@ -21,7 +21,9 @@ function hexagonal(inputNumber) {
   }
 
   // Calculate input's triangular number
-  const hexagonalNumber = (Number(inputNumber) * (Number(inputNumber) + 1)) / 2;
+  const hexagonalNumber = BigInt(
+    Number(inputNumber) * (2 * Number(inputNumber) - 1)
+  );
 
   return hexagonalNumber;
 }

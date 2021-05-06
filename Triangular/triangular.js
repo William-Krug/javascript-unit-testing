@@ -21,8 +21,9 @@ function triangular(inputNumber) {
   }
 
   // Calculate input's triangular number
-  const triangularNumber =
-    (Number(inputNumber) * (Number(inputNumber) + 1)) / 2;
+  const triangularNumber = BigInt(
+    (Number(inputNumber) * (Number(inputNumber) + 1)) / 2
+  );
 
   return triangularNumber;
 }

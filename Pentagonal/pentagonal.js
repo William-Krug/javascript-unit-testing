@@ -21,8 +21,9 @@ function pentagonal(inputNumber) {
   }
 
   // Calculate input's pentagonal number
-  const pentagonalNumber =
-    (Number(inputNumber) * (3 * Number(inputNumber) - 1)) / 2;
+  const pentagonalNumber = BigInt(
+    (Number(inputNumber) * (3 * Number(inputNumber) - 1)) / 2
+  );
 
   return pentagonalNumber;
 }
