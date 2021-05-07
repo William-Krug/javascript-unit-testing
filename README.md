@@ -11,6 +11,11 @@ _Duration: 2 Day Sprint_
 
 This repo was created to practice unit testing and Test Driven Development (TDD) practices. `.test.js` files were written first to capture normal use cases and then edge cases of bad or missing inputs. Implementation code was then written to handle all test cases.
 
+## Screen Shot
+
+![Unit Testing](./ReadMeImages/unit_testing.png)
+![Results](./ReadMeImages/TPH_Number.png)
+
 ### Prerequisites
 
 - [Node](https://nodejs.org/en/)
