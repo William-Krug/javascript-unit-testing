@@ -85,8 +85,6 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
             results.h = hexagonalStartingNumber;
             results.number = triangularNumber;
 
-            console.log('*#* RESULTS *#*');
-            console.log('\tresults:', results);
             return results;
           }
           // Triangular Number is less than Pentagonal Number
