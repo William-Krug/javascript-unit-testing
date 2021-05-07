@@ -15,6 +15,28 @@ const hexagonal = require('../Hexagonal/hexagonal.js');
  * @returns {object} starting values for triangular, pentagonal, and hexagonal equations and their equivalent Number
  */
 function findNextTPHNumber(triangle, pentagon, hexagon) {
+  // Check for missing arguments
+  if (
+    triangle === undefined ||
+    pentagon === undefined ||
+    hexagon === undefined
+  ) {
+    throw new Error(`1 or more missing arguments. Please enter 3 numbers.`);
+  }
+
+  // Check for non number character inputs (eg. 'a')
+  const convertedTriangle = Number(triangle);
+  const convertedPentagon = Number(pentagon);
+  const convertedHexagon = Number(hexagon);
+
+  if (
+    isNaN(convertedTriangle) ||
+    isNaN(convertedPentagon) ||
+    isNaN(convertedHexagon)
+  ) {
+    throw new Error(`Invalid argument passed. Please enter only numbers.`);
+  }
+
   // Storage array for all results
   const results = {
     t: 0,
@@ -24,9 +46,9 @@ function findNextTPHNumber(triangle, pentagon, hexagon) {
   };
 
   // Starting values
-  let triangularStartingNumber = triangle;
-  let pentagonalStartingNumber = pentagon;
-  let hexagonalStartingNumber = hexagon;
+  let triangularStartingNumber = Number(triangle);
+  let pentagonalStartingNumber = Number(pentagon);
+  let hexagonalStartingNumber = Number(hexagon);
   let triangularNumber = 0;
   let pentagonalNumber = 0;
   let hexagonalNumber = 0;

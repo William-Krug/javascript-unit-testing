@@ -4,12 +4,12 @@ describe('the pentagonal function', () => {
   /*
     Happy Path
   */
-  test('should return 1 if the passed input is 1', () => {
+  test('should return 1n if the passed input is 1', () => {
     const result = pentagonal(1);
     expect(result).toBe(1n);
   });
 
-  test('should return 70 if the passed input is 7', () => {
+  test('should return 70n if the passed input is 7', () => {
     const result = pentagonal(7);
     expect(result).toBe(70n);
   });
@@ -17,12 +17,12 @@ describe('the pentagonal function', () => {
   /*
     Bad Input Path
   */
-  test('should return 5 if the passed input is "2"', () => {
+  test('should return 5n if the passed input is "2"', () => {
     const result = pentagonal('2');
     expect(result).toBe(5n);
   });
 
-  test('should return 51 if the passed input is "6"', () => {
+  test('should return 51n if the passed input is "6"', () => {
     const result = pentagonal('6');
     expect(result).toBe(51n);
   });

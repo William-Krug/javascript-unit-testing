@@ -4,12 +4,12 @@ describe('the triangular function', () => {
   /*
     Happy Path
   */
-  test('should return 1 if the passed input is 1', () => {
+  test('should return 1n if the passed input is 1', () => {
     const result = triangular(1);
     expect(result).toBe(1n);
   });
 
-  test('should return 28 if the passed input is 7', () => {
+  test('should return 28n if the passed input is 7', () => {
     const result = triangular(7);
     expect(result).toBe(28n);
   });
@@ -17,12 +17,12 @@ describe('the triangular function', () => {
   /*
     Bad Input Path
   */
-  test('should return 3 if the passed input is the string "2"', () => {
+  test('should return 3n if the passed input is the string "2"', () => {
     const result = triangular('2');
     expect(result).toBe(3n);
   });
 
-  test('should return 21 if the passed input is the string "6"', () => {
+  test('should return 21n if the passed input is the string "6"', () => {
     const result = triangular('6');
     expect(result).toBe(21n);
   });
