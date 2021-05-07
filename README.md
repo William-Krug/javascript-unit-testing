@@ -24,13 +24,10 @@ This repo was created to practice unit testing and Test Driven Development (TDD)
 
 ## Usage
 
-1. The Home Page introduces myself and allows users to download my current resume.
-2. Projects highlights examples of my work. Details around lessons learned and technologies used are included along with links to deployed sites (if applicable) and GitHub repositories.
-3. Skills lists out technical, soft, and hard skills I posses.
-4. Experience lists my entire job history dating back to high school.
-5. Education lists my higher education experiences.
-6. About gives background about me and makes me more personable.
-7. Contact provides various means to get in touch with me.
+1. The `findNextTPHNumber()` function calculates the next: Triangular Number === Pentagonal Number === Hexagonal Number based on the starting input values.
+2. Each Number (Triangular, Pentagonal, Hexagonal) have their own functions that are called to calculate their respective Numbers.
+3. When `node FindNextTPHNumber/findNextTPHNumber.js` is run, the 1st, 2nd, and 3rd Numbers are found along with their starting values to reach the Number from each calculation.
+4. All functions have corresponding unit tests.
 
 ## Built With
 
@@ -61,10 +58,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Acknowledgement
-
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. My instructors, Edan Schwartz & Chad Smith, and the Cullen cohort for their support and encouragement throughout this intense program.
 
 ## Support
 
