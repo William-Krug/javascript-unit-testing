@@ -4,27 +4,27 @@ describe('the hexagonal function', () => {
   /*
     Happy Path
   */
-  test('should return 1 if the passed input is 1', () => {
+  test('should return 1n if the passed input is 1', () => {
     const result = hexagonal(1);
-    expect(result).toBe(1);
+    expect(result).toBe(1n);
   });
 
-  test('should return 28 if the passed input is 7', () => {
+  test('should return 28n if the passed input is 7', () => {
     const result = hexagonal(7);
-    expect(result).toBe(28);
+    expect(result).toBe(91n);
   });
 
   /*
     Bad Input Path
   */
-  test('should return 3 if the passed input is the string "2"', () => {
+  test('should return 3n if the passed input is the string "2"', () => {
     const result = hexagonal('2');
-    expect(result).toBe(3);
+    expect(result).toBe(6n);
   });
 
-  test('should return 21 if the passed input is the string "6"', () => {
+  test('should return 21n if the passed input is the string "6"', () => {
     const result = hexagonal('6');
-    expect(result).toBe(21);
+    expect(result).toBe(66n);
   });
 
   test('should fail if given a letter character or string', () => {

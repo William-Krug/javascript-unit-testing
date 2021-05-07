@@ -6,12 +6,12 @@ describe('the pentagonal function', () => {
   */
   test('should return 1 if the passed input is 1', () => {
     const result = pentagonal(1);
-    expect(result).toBe(1);
+    expect(result).toBe(1n);
   });
 
   test('should return 70 if the passed input is 7', () => {
     const result = pentagonal(7);
-    expect(result).toBe(70);
+    expect(result).toBe(70n);
   });
 
   /*
@@ -19,12 +19,12 @@ describe('the pentagonal function', () => {
   */
   test('should return 5 if the passed input is "2"', () => {
     const result = pentagonal('2');
-    expect(result).toBe(5);
+    expect(result).toBe(5n);
   });
 
   test('should return 51 if the passed input is "6"', () => {
     const result = pentagonal('6');
-    expect(result).toBe(51);
+    expect(result).toBe(51n);
   });
 
   test('should fail if given a letter character or string', () => {

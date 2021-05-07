@@ -6,12 +6,12 @@ describe('the triangular function', () => {
   */
   test('should return 1 if the passed input is 1', () => {
     const result = triangular(1);
-    expect(result).toBe(1);
+    expect(result).toBe(1n);
   });
 
   test('should return 28 if the passed input is 7', () => {
     const result = triangular(7);
-    expect(result).toBe(28);
+    expect(result).toBe(28n);
   });
 
   /*
@@ -19,12 +19,12 @@ describe('the triangular function', () => {
   */
   test('should return 3 if the passed input is the string "2"', () => {
     const result = triangular('2');
-    expect(result).toBe(3);
+    expect(result).toBe(3n);
   });
 
   test('should return 21 if the passed input is the string "6"', () => {
     const result = triangular('6');
-    expect(result).toBe(21);
+    expect(result).toBe(21n);
   });
 
   test('should fail if given a letter character or string', () => {
